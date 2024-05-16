@@ -13,5 +13,6 @@ Execute os comandos de `build` e `run` ajustando as variáveis de ambiente de ac
 
 ```bash
 docker build -t docker-backend .
+docker-compose up -d
 docker run -it --rm -p 5000:5000 -e PORT=5000 -e DATABASE_URL="postgresql://postgres:secret@host.docker.internal:5432/develop?schema=public" docker-backend
 ```
